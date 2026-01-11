@@ -1,9 +1,12 @@
-# HIT137 Assignment 2
+ HIT137 Assignment 2
 
-## Question 2: Temperature Analysis
+Question 2: Temperature Analysis
 
-### How to Run:
+ How to Run:
 1. python main.py
 
-### Group Members:
+Group Members:
 - Bishal Basnet
+- Aryan Thapa
+- Nishan Hamal
+- 
