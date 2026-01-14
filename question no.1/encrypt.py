@@ -1,36 +1,20 @@
-def encrypt_text(shift1, shift2):
-    with open("raw_text.txt", "r") as f:
-        text = f.read()
+def shift_lower(c, shift):
+    pos = ord(c) - ord('a')
+    pos = (pos + shift) % 26
+    return chr(pos + ord('a'))
 
-    encrypted = ""
-    key_map = ""
+def shift_upper(c, shift):
+    pos = ord(c) - ord('A')
+    pos = (pos + shift) % 26
+    return chr(pos + ord('A'))
 
-    for ch in text:
-        if ch.islower():
-            if 'a' <= ch <= 'm':
-                shift = shift1 * shift2
-                encrypted += chr((ord(ch) - 97 + shift) % 26 + 97)
-                key_map += "l1"
-            else:
-                shift = shift1 + shift2
-                encrypted += chr((ord(ch) - 97 - shift) % 26 + 97)
-                key_map += "l2"
-
-        elif ch.isupper():
-            if 'A' <= ch <= 'M':
-                encrypted += chr((ord(ch) - 65 - shift1) % 26 + 65)
-                key_map += "u1"
-            else:
-                shift = shift2 ** 2
-                encrypted += chr((ord(ch) - 65 + shift) % 26 + 65)
-                key_map += "u2"
-
+def encrypt_text(text, shift1, shift2):
+    result = ""
+    for c in text:
+        if 'a' <= c <= 'z':
+            result += shift_lower(c, shift1)  # always forward
+        elif 'A' <= c <= 'Z':
+            result += shift_upper(c, shift2)  # always forward
         else:
-            encrypted += ch
-            key_map += "__"
-
-    with open("encrypted_text.txt", "w") as f:
-        f.write(encrypted)
-
-    with open("key_map.txt", "w") as f:
-        f.write(key_map)
+            result += c
+    return result
