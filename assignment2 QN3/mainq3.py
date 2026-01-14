@@ -3,7 +3,7 @@ from recursive import edge
 
 
     
-def main ():
+def main (): #Defening `main` function
 
   screen = turtle.Screen() 
   screen.title("Recursive Pattern Drawer") 
