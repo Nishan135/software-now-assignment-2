@@ -2,8 +2,8 @@ import turtle
 from recursive import edge
 
 
-    
-def main (): #Defening the main function.
+  #Defening the main function.  
+def main (): 
 
   screen = turtle.Screen() 
   screen.title("Recursive Pattern Drawer") 
@@ -15,7 +15,7 @@ def main (): #Defening the main function.
   pen.color("black") 
   pen.pensize(1) 
   
-        #user inputs from the user for sides, length and depth.
+#user inputs from the user for sides, length and depth.
   try:
     sides = int(input("Enter the number of sides:"))
     length = float(input("Enter the side length:"))
@@ -29,13 +29,13 @@ def main (): #Defening the main function.
   pen.goto(-length / 2, length / 2)
   pen.pendown() 
   
-  
-  angle = 360 / sides   #Calculating the angle based on the number of sides given by the user.
+  #Calculating the angle based on the number of sides given by the user.
+  angle = 360 / sides   
   for _ in range(sides): 
     edge(pen,length, depth)
     pen.right(angle) 
-
-  pen.hideturtle()  #Hiding the turtle after drawing is completed.
+#Hiding the turtle after drawing is completed.
+  pen.hideturtle()  
     
   screen.mainloop()
   
