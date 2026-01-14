@@ -13,7 +13,7 @@ def main():
 
     print("=" * 50)
     print("       TEMPERATURE ANALYSIS")
-    print("=" * 50)
+    print("=" * 50).
 
     # Step 1: Load temperature data
     print("\n1. Loading temperature data...")
