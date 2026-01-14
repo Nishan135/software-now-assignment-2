@@ -35,7 +35,7 @@ def main (): #Defening the main function.
     edge(pen,length, depth)
     pen.right(angle) 
 
-  pen.hideturtle()
+  pen.hideturtle()  #Hiding the turtle after drawing is completed.
     
   screen.mainloop()
   
