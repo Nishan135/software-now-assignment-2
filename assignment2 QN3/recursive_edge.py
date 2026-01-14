@@ -11,3 +11,4 @@ def draw_pattern(length, depth):
         draw_edge(length, depth - 1)
         turtle.right(60)
         draw_edge(length, depth - 1)
+        h
