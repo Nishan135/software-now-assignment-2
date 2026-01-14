@@ -1,36 +1,12 @@
-def decrypt_text(shift1, shift2):
-    with open("encrypted_text.txt", "r") as f:
-        text = f.read()
+from encryption import shift_lower, shift_upper
 
-    with open("key_map.txt", "r") as f:
-        key_map = f.read()
-
-    decrypted = ""
-    i = 0
-
-    while i < len(text):
-        ch = text[i]
-        rule = key_map[i*2:i*2+2]
-
-        if rule == "l1":
-            shift = shift1 * shift2
-            decrypted += chr((ord(ch) - 97 - shift) % 26 + 97)
-
-        elif rule == "l2":
-            shift = shift1 + shift2
-            decrypted += chr((ord(ch) - 97 + shift) % 26 + 97)
-
-        elif rule == "u1":
-            decrypted += chr((ord(ch) - 65 + shift1) % 26 + 65)
-
-        elif rule == "u2":
-            shift = shift2 ** 2
-            decrypted += chr((ord(ch) - 65 - shift) % 26 + 65)
-
+def decrypt_text(text, shift1, shift2):
+    result = ""
+    for c in text:
+        if 'a' <= c <= 'z':
+            result += shift_lower(c, -shift1) 
+        elif 'A' <= c <= 'Z':
+            result += shift_upper(c, -shift2) 
         else:
-            decrypted += ch
-
-        i += 1
-
-    with open("decrypted_text.txt", "w") as f:
-        f.write(decrypted)
+            result += c
+    return result
