@@ -12,7 +12,7 @@ def encrypt_text(text, shift1, shift2):
     result = ""
     for c in text:
         if 'a' <= c <= 'z':
-            result += shift_lower(c, shift1)  # always forward
+            result += shift_lower(c, shift1)  # forward shift
         elif 'A' <= c <= 'Z':
             result += shift_upper(c, shift2)  # always forward
         else:
