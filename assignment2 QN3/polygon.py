@@ -12,3 +12,4 @@ def draw_polygon(sides, side_length, depth):
     radius = length / (2 * math.tan(math.pi / sides))
     turtle.goto(-length / 2, radius / 2)
     turtle.pendown()
+    h
