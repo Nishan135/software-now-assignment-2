@@ -1,5 +1,5 @@
-from encryption import encrypt_text
-from decryption import decrypt_text   
+from encrypt import encrypt_text
+from decrypt import decrypt_text   
 
 def verify(original_text, decrypted_text):
     original_norm = ' '.join(original_text.split())
@@ -10,7 +10,7 @@ def verify(original_text, decrypted_text):
     else:
         print("Decryption failed! Text does not match original.")
 
-with open("raw_text.txt", "r") as f:
+with open("question no.1/main.py", "r") as f:
     raw_text = f.read().replace('\r', '')
 
 shift1 = int(input("Enter shift1: "))

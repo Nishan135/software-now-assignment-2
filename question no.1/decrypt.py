@@ -1,4 +1,4 @@
-from encryption import shift_lower, shift_upper
+from encrypt import shift_lower, shift_upper
 
 def decrypt_text(text, shift1, shift2):
     result = ""
