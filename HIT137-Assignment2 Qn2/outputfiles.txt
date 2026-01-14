@@ -1,0 +1,59 @@
+==================================================
+       TEMPERATURE ANALYSIS
+==================================================
+
+1. Loading temperature data...
+Reading 20 CSV files...
+Successfully read: stations_group_2004.csv
+Successfully read: stations_group_2005.csv
+Successfully read: stations_group_2002.csv
+Successfully read: stations_group_2003.csv
+Successfully read: stations_group_2001.csv
+Successfully read: stations_group_2000.csv
+Successfully read: stations_group_1988.csv
+Successfully read: stations_group_1989.csv
+Successfully read: stations_group_1999.csv
+Successfully read: stations_group_1998.csv
+Successfully read: stations_group_1995.csv
+Successfully read: stations_group_1994.csv
+Successfully read: stations_group_1996.csv
+Successfully read: stations_group_1997.csv
+Successfully read: stations_group_1993.csv
+Successfully read: stations_group_1987.csv
+Successfully read: stations_group_1986.csv
+Successfully read: stations_group_1992.csv
+Successfully read: stations_group_1990.csv
+Successfully read: stations_group_1991.csv
+Total rows of data read: 2240
+
+2. Calculating seasonal averages...
+Seasonal Averages:
+  Summer: 32.1°C
+  Autumn: 27.3°C
+  Winter: 21.1°C
+  Spring: 27.4°C
+
+3. Finding the largest temperature range across stations...
+Largest Temperature Range: 24.4°C
+  Station BOURKE-AIRPORT-AWS: Range = 24.4°C
+
+4. Analyzing station stability...
+Most Stable Stations (StdDev 1.20°C):
+  DARWIN-AIRPORT: StdDev = 1.20°C
+  HORN-ISLAND: StdDev = 1.20°C
+
+Most Variable Stations (StdDev 6.90°C):
+  RUTHERGLEN-RESEARCH: StdDev = 6.90°C
+  WAGGA-WAGGA-AMO: StdDev = 6.90°C
+
+5. Saving results to files...
+Saved: average_temp.txt
+Saved: largest_temp_range_station.txt
+Saved: temperature_stability_stations.txt
+
+==================================================
+DONE! Results have been saved. Check the following files:
+  average_temp.txt
+  largest_temp_range_station.txt
+  temperature_stability_stations.txt
+==================================================
