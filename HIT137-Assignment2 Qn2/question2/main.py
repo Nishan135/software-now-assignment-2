@@ -1,4 +1,4 @@
-# main.py - Main program for temperature data analysis.
+# main.py - Main program for temperature data analysis
 
 from read_data import get_all_data
 from calculate import (
