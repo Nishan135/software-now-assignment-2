@@ -5,3 +5,4 @@ Most Stable Stations:
 Most Variable Stations:
   Station RUTHERGLEN-RESEARCH: StdDev 6.90°C
   Station WAGGA-WAGGA-AMO: StdDev 6.90°C
+.
